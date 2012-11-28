@@ -1,0 +1,13 @@
+<h1>Contacts</h1>
+
+<script type="text/x-handlebars">
+  {{#collection contentBinding="App.contactsController"
+      tagName="ul"}}
+    {{view.content.id}} {{view.content.fullName}}
+  {{/collection}}
+
+  {{#collection contentBinding="App.contactnumbersController"
+      tagName="ul"}}
+    {{view.content.id}} {{view.content.number}}
+  {{/collection}}
+</script>

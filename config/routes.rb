@@ -1,4 +1,10 @@
 Testapp::Application.routes.draw do
+  get "app/all"
+  match "app/contacts/:id" => "app#contacts"
+  match 'contacts.json' => "app#contactsjson"
+
+  root :to => "app#all"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
